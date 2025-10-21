@@ -36,14 +36,6 @@ try:
         user=st.secrets["postgres"]["user"],
         password=st.secrets["postgres"]["password"]
     )
-    else:
-        # Fallback untuk local development
-        conn = psycopg2.connect(
-            host=os.getenv('DB_HOST', 'localhost'),
-            port=os.getenv('DB_PORT', '5432'),
-            database=os.getenv('DB_NAME', 'talent_db'),
-            user=os.getenv('DB_USER', 'postgres'),
-            password=os.getenv('DB_PASSWORD', 'password')
 except Exception as e:
     st.error(f"Database connection failed: {e}")
     st.stop()
@@ -1370,3 +1362,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
