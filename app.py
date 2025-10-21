@@ -34,7 +34,9 @@ try:
         port=st.secrets["postgres"]["port"],
         database=st.secrets["postgres"]["database"],
         user=st.secrets["postgres"]["user"],
-        password=st.secrets["postgres"]["password"]
+        password=st.secrets["postgres"]["password"],
+        sslmode="require",
+        client_encoding='utf8'
     )
 except Exception as e:
     st.error(f"Database connection failed: {e}")
@@ -1362,4 +1364,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
