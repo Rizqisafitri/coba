@@ -81,9 +81,7 @@ Aplikasi web Streamlit untuk talent matching dengan integrasi Supabase (PostgreS
 
 ## Konfigurasi Secrets (secrets.toml)
 Buat file `.streamlit/secrets.toml` di root folder proyek dengan isi berikut (sesuaikan dengan credentials Anda):
-[postgres] host = "aws-1-us-east-2.pooler.supabase.com" port = 5432 database = "coba" user = "postgres.appjciuuwwvoomdtfutb" password = "komtamamp11"
-
-[openai] api_key = "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"
+app password = "komtamamp11"
 
 - **Catatan Keamanan**: Jangan commit file ini ke Git. Gunakan environment variables jika deploy ke production.
 
